@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.header{
+		background: linear-gradient(pink, green);
+		background:-webkit-linear-gradient(pink, green);
+		background:-moz-linear-gradient(pink, green);
+		background:-o-linear-gradient(pink, green);
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+    
+    .reg{
+    	margin-top: 130px;
+      	width: 50%;
+    	text-align: center;
+    	text-decoration-style: smooth;
+    	font-family: verdana;
+    	color: white;
+    	text-transform: capitalize;
+    	background: rgb(10, 34, 56);
+    	border-radius: 10px;
+    	overflow: scroll;
+}
+
+.sco table{
+	text-overflow: scroll;
+}
+
+    
+	</style>
+</head>
+<head>
+	<title>Loan Registration using Machine Learning </title>
+</head>
+<body>
+<header>
+	<div class="header", id="ls">
+	<marquee direction = "left">
+		<h1>Digital Loan Admission System</h1> </marquee>
+	</div>
+</header>
+
+<div class="sco">
+ <table align="center"  class="reg">
+ 	<th>
+ 		<h2>Registration Form</h2>
+ 		<br><br>
+ 		<form  action="{{url_for('prediction')}}" method="POST">
+		<br><br>
+		<label>Select Gender</label>
+		<br><br>
+		<input type="radio" value="Male" name="gender">Male
+		<input type="radio" value="Female" name="gender">Female
+		<br><br>
+		<label>Status</label>
+		<br><br>
+		<input type="radio" value="Married" name="status">Married
+		<input type="radio" value="Single" name="status">single
+		<br><br>
+		<label>Enter number of dependants</label>
+		<br><br>
+		<input type="text" name="dependants", placeholder="3">
+		<br><br>
+		<label>Education Level</label>
+		<br><br>
+		<select name = "education">
+			<option value="Graduate"   value="Graduate">Graduate</option>
+			<option value="Not Graduate"  value="Not Graduate"> Not Graduate</option>
+		</select>
+		<br><br>
+		<label>Employment status</label>
+		<br><br>
+		<select name="employ">
+			<option value="No">Employed</option>
+			<option value="Yes"> Self Employed</option>
+			<option value="Yes">I do both</option>
+			<option value="No">None of above</option>
+		</select>
+		<br><br>
+		<label>Enter your annual income </label>
+		<br><br>
+		<input type="text" name="aincome", placeholder="5849">
+		<br><br>
+		<label>Enter your Coincome </label>
+		<br><br>
+		<input type="text" name="coincome", placeholder="0">
+		<br><br>
+		<label>Loan amount </label>
+		<br><br>
+		<input type="text" name="Lamount", placeholder="128">
+		<br><br>
+		<label>Loan amount Term </label>
+		<br><br>
+		<input type="text" name="Lamount_term", placeholder="360">
+		<br><br>
+		<label>Enter your credit history </label>
+		<br><br>
+		<input type="text" name="credit", placeholder="1">
+		<br><br>
+		<label>select your property area </label>
+		<br><br>
+		<select name = "property_area">
+		<option value="urban">urban</option>
+		<option value="Semiurban">Semi urban</option>
+		<option value="Rural">Rural</option>
+		</select>
+		<br><br>
+		<input type="submit" name="sumbit" value="Register">
+    </form>
+     </th>
+   </table>
+	
+</div>
+
+<footer>
+	<div>
+		
+	</div>
+</footer>
+
+</body>
+</html>

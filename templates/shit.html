@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.header{
+		background: linear-gradient(blue, white);
+		background:-webkit-linear-gradient(blue, white);
+		background:-moz-linear-gradient(blue, white);
+		background:-o-linear-gradient(blue, white);
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+	.app h1{
+		margin-top:200px; 
+       color: blue;
+       text-transform:capitalize;
+	}
+	</style>
+	<title> Classification results</title>
+</head>
+<body>
+	<div>
+		<header class="header">
+		<marquee behaviour = "alternate"> 
+			<h1>The Application result </h1> 
+		</marquee>
+		</header>
+	</div>
+
+	<div class="app">
+		<section>
+	<table align="center">	
+		<th>
+	<h1> Your information has been Submitted Please wait </h1>
+	{% if prediction== 1 %}
+	<br><br>
+	<h1>Congratulations your eligble for this Loan</h1>
+	<br><br>
+	{% elif prediction==0 %}
+	<h1 style="color: red">We sad to inform that your request has not been accepted</h1>
+	{% endif %}
+	</th>
+	</table>
+		</section>
+	</div>
+
+	<div>
+		<footer>
+			
+		</footer>
+	</div>
+
+
+</body>
+</html>
